@@ -5,24 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="CAPIFIX Logística - Empresa líder en transporte nacional, distribución y almacenaje en España. Servicios de logística para eventos, envíos urgentes y soluciones de transporte personalizadas. Cobertura en toda España con atención 24/7."
+      content="CAPIFIX Logística Integral - Empresa líder en transporte nacional e internacional, mudanzas, distribución y almacenaje en España y Unión Europea. Servicios de logística para eventos, envíos urgentes, limpieza de obras y soluciones de transporte personalizadas. Cobertura en toda España con atención 24/7."
     />
     <meta
       name="keywords"
-      content="transporte nacional España, logística y distribución, servicios de almacenaje, empresa transporte Madrid, logística eventos, envíos urgentes, mozo de almacén, distribución mercancías, transporte cargas, soluciones logísticas"
+      content="transporte nacional España, logística y distribución, servicios de almacenaje, mudanzas internacionales, empresa transporte Madrid, logística eventos, envíos urgentes, mozo de almacén, distribución mercancías, transporte cargas, soluciones logísticas, mudanzas UE, limpieza obras"
     />
-    <meta name="author" content="CAPIFIX Logística" />
+    <meta name="author" content="CAPIFIX Logística Integral" />
     <meta
       property="og:title"
-      content="CAPIFIX Logística | Transporte y Distribución en España"
+      content="CAPIFIX Logística Integral | Transporte y Distribución España y UE"
     />
     <meta
       property="og:description"
-      content="Soluciones rápidas y seguras en transporte nacional, logística de eventos y almacenaje temporal. Cobertura en toda España."
+      content="Soluciones rápidas y seguras en transporte nacional e internacional, mudanzas, logística de eventos y almacenaje temporal. Cobertura en España y Unión Europea."
     />
     <meta property="og:type" content="website" />
     <title>
-      CAPIFIX Logística | Transporte Nacional y Distribución en España
+      CAPIFIX Logística Integral | Transporte Nacional e Internacional, Mudanzas
+      y Distribución
     </title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -38,8 +39,10 @@
       }
 
       :root {
-        --orange: #ff6b00;
-        --orange-light: #ff8534;
+        --orange: #e64a19;
+        --orange-light: #ff5722;
+        --blue: #1e3a5f;
+        --blue-light: #2c5f8d;
         --dark: #0a0a0a;
         --dark-card: #1a1a1a;
         --text-gray: #b0b0b0;
@@ -60,24 +63,35 @@
         position: fixed;
         top: 0;
         width: 100%;
-        padding: 1.5rem 5%;
+        padding: 0.5rem 5%;
         display: flex;
         justify-content: space-between;
         align-items: center;
         z-index: 1000;
-        background: rgba(10, 10, 10, 0.8);
+        background: rgba(10, 10, 10, 0.95);
         backdrop-filter: blur(10px);
+        border-bottom: 1px solid rgba(30, 58, 95, 0.3);
+        height: 80px; /* Altura fija del navbar */
       }
 
       .logo {
-        font-size: 1.5rem;
-        font-weight: 800;
-        color: #fff;
-        text-decoration: none;
+        position: relative;
+        z-index: 1001;
+        padding: 0;
+        margin: 0;
       }
 
-      .logo span {
-        color: var(--orange);
+      .logo img {
+        height: 150px; /* Logo grande */
+        width: auto;
+        transition: transform 0.3s;
+        display: block;
+        position: relative;
+        top: -5px; /* Lo empuja un poco hacia abajo para que "salga" del navbar */
+      }
+
+      .logo img:hover {
+        transform: scale(1.05);
       }
 
       nav ul {
@@ -136,18 +150,14 @@
         align-items: center;
         justify-content: center;
         cursor: pointer;
-        box-shadow: 0 10px 30px rgba(255, 107, 0, 0.4);
+        box-shadow: 0 10px 30px rgba(230, 74, 25, 0.4);
         transition: all 0.3s;
       }
 
       .fixed-nav-btn:hover {
         transform: scale(1.1);
-        box-shadow: 0 15px 40px rgba(255, 107, 0, 0.6);
+        box-shadow: 0 15px 40px rgba(230, 74, 25, 0.6);
         background: #fff;
-      }
-
-      .fixed-nav-btn:hover::before {
-        color: var(--orange);
       }
 
       .fixed-nav-btn::before {
@@ -156,13 +166,17 @@
         color: #fff;
       }
 
+      .fixed-nav-btn:hover::before {
+        color: var(--orange);
+      }
+
       .fixed-nav-menu {
         position: absolute;
         bottom: 80px;
         right: 0;
         background: rgba(26, 26, 26, 0.95);
         backdrop-filter: blur(20px);
-        border: 1px solid rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(30, 58, 95, 0.3);
         border-radius: 16px;
         padding: 1rem;
         min-width: 200px;
@@ -191,7 +205,7 @@
       }
 
       .fixed-nav-menu a:hover {
-        background: rgba(255, 107, 0, 0.2);
+        background: rgba(230, 74, 25, 0.2);
         transform: translateX(-5px);
       }
 
@@ -201,7 +215,7 @@
 
       #hero {
         min-height: 100vh;
-        padding: 8rem 5% 4rem;
+        padding: 6rem 5% 4rem;
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 4rem;
@@ -217,8 +231,12 @@
         right: 0;
         width: 50%;
         height: 100%;
-        background: linear-gradient(135deg, var(--orange) 0%, #ff8534 100%);
-        opacity: 0.15;
+        background: linear-gradient(
+          135deg,
+          var(--blue) 0%,
+          var(--blue-light) 100%
+        );
+        opacity: 0.1;
         border-radius: 0 0 0 50%;
       }
 
@@ -260,7 +278,7 @@
 
       .btn-secondary {
         background: transparent;
-        border: 2px solid #fff;
+        border: 2px solid var(--blue-light);
         padding: 0.8rem 2rem;
         border-radius: 8px;
         color: #fff;
@@ -271,8 +289,8 @@
       }
 
       .btn-secondary:hover {
-        background: #fff;
-        color: var(--dark);
+        background: var(--blue-light);
+        color: #fff;
       }
 
       .hero-image {
@@ -283,14 +301,14 @@
       .hero-image img {
         width: 100%;
         border-radius: 20px;
-        box-shadow: 0 20px 60px rgba(255, 107, 0, 0.3);
+        box-shadow: 0 20px 60px rgba(230, 74, 25, 0.3);
       }
 
       .floating-card {
         position: absolute;
         background: rgba(26, 26, 26, 0.9);
         backdrop-filter: blur(20px);
-        border: 1px solid rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(30, 58, 95, 0.3);
         padding: 1.5rem;
         border-radius: 16px;
         box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
@@ -363,7 +381,7 @@
         background: var(--dark-card);
         padding: 2.5rem;
         border-radius: 16px;
-        border: 1px solid rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(30, 58, 95, 0.2);
         transition: all 0.3s;
         position: relative;
         overflow: hidden;
@@ -391,8 +409,8 @@
 
       .service-card:hover {
         transform: translateY(-10px);
-        border-color: rgba(255, 107, 0, 0.3);
-        box-shadow: 0 20px 60px rgba(255, 107, 0, 0.2);
+        border-color: rgba(230, 74, 25, 0.3);
+        box-shadow: 0 20px 60px rgba(230, 74, 25, 0.2);
       }
 
       .service-icon {
@@ -434,6 +452,7 @@
         overflow: hidden;
         aspect-ratio: 16/10;
         cursor: pointer;
+        border: 1px solid rgba(30, 58, 95, 0.2);
       }
 
       .gallery-item img {
@@ -468,12 +487,25 @@
       }
 
       .horarios-container {
-        max-width: 800px;
+        max-width: 900px;
         margin: 3rem auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        gap: 2rem;
+      }
+
+      .horario-box {
         background: var(--dark-card);
         border-radius: 20px;
-        padding: 3rem;
-        border: 1px solid rgba(255, 255, 255, 0.05);
+        padding: 2.5rem;
+        border: 1px solid rgba(30, 58, 95, 0.2);
+      }
+
+      .horario-box h3 {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+        color: var(--orange);
+        text-align: center;
       }
 
       .horario-item {
@@ -490,7 +522,7 @@
       }
 
       .horario-item:hover {
-        background: rgba(255, 107, 0, 0.05);
+        background: rgba(230, 74, 25, 0.05);
         padding-left: 2rem;
       }
 
@@ -505,8 +537,14 @@
       }
 
       .horario-destacado {
-        background: rgba(255, 107, 0, 0.1);
+        background: rgba(230, 74, 25, 0.1);
         border-radius: 12px;
+      }
+
+      .horario-emergencia {
+        margin-top: 2rem;
+        padding-top: 2rem;
+        border-top: 2px solid rgba(30, 58, 95, 0.3);
       }
 
       #nosotros {
@@ -539,13 +577,13 @@
         padding: 2rem;
         background: var(--dark-card);
         border-radius: 16px;
-        border: 1px solid rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(30, 58, 95, 0.2);
         transition: all 0.3s;
       }
 
       .stat-item:hover {
         transform: translateY(-10px);
-        border-color: rgba(255, 107, 0, 0.3);
+        border-color: rgba(230, 74, 25, 0.3);
       }
 
       .stat-item h3 {
@@ -557,6 +595,46 @@
       .stat-item p {
         color: var(--text-gray);
         margin-top: 0.5rem;
+      }
+
+      .reviews-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .review-card {
+        background: var(--dark-card);
+        padding: 2rem;
+        border-radius: 16px;
+        border: 1px solid rgba(30, 58, 95, 0.2);
+        transition: all 0.3s;
+      }
+
+      .review-card:hover {
+        transform: translateY(-5px);
+        border-color: rgba(230, 74, 25, 0.3);
+      }
+
+      .review-stars {
+        color: var(--orange);
+        margin-bottom: 1rem;
+        font-size: 1.2rem;
+      }
+
+      .review-text {
+        color: var(--text-gray);
+        margin-bottom: 1rem;
+        font-style: italic;
+        line-height: 1.6;
+      }
+
+      .review-author {
+        font-weight: 600;
       }
 
       #contacto {
@@ -595,7 +673,7 @@
         color: #fff;
         min-width: 180px;
         transition: all 0.3s;
-        border: 1px solid rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(30, 58, 95, 0.2);
       }
 
       .social-btn:hover {
@@ -632,7 +710,7 @@
         align-items: center;
         justify-content: center;
         font-size: 2rem;
-        background: rgba(255, 107, 0, 0.1);
+        background: rgba(230, 74, 25, 0.1);
         border-radius: 50%;
       }
 
@@ -653,7 +731,7 @@
       footer {
         background: #000;
         padding: 3rem 5%;
-        border-top: 1px solid rgba(255, 255, 255, 0.05);
+        border-top: 1px solid rgba(30, 58, 95, 0.3);
       }
 
       .footer-content {
@@ -674,6 +752,15 @@
       }
 
       @media (max-width: 968px) {
+        nav {
+          height: 75px;
+        }
+
+        .logo img {
+          height: 130px; /* Tamaño intermedio para tablets */
+          top: -5px;
+        }
+
         nav ul {
           display: none;
         }
@@ -697,6 +784,10 @@
         }
 
         .horarios-container {
+          grid-template-columns: 1fr;
+        }
+
+        .horario-box {
           padding: 2rem 1.5rem;
         }
 
@@ -722,7 +813,24 @@
 
       @media (max-width: 640px) {
         nav {
-          padding: 1rem 5%;
+          padding: 0.5rem 5%;
+          height: 70px; /* Navbar más pequeño en móvil */
+        }
+
+        .logo {
+          position: relative;
+          z-index: 1001;
+          padding: 0;
+          margin: 0;
+        }
+
+        .logo img {
+          height: 110px; /* Logo más pequeño en móvil */
+          width: auto;
+          transition: transform 0.3s;
+          display: block;
+          position: relative;
+          top: -5px;
         }
 
         .hero-content h1 {
@@ -754,24 +862,26 @@
       {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
-        "name": "CAPIFIX Transporte y Logística",
-        "image": "https://www.capifix.es/logo.png",
-        "description": "Empresa de transporte nacional, logística y distribución en España. Servicios de almacenaje, logística para eventos y envíos urgentes.",
+        "name": "CAPIFIX Logística Integral",
+        "image": "https://www.capifixlogistica.com/assets/img/logo.png",
+        "description": "Empresa de transporte nacional e internacional, mudanzas, logística y distribución en España y Unión Europea. Servicios de almacenaje, logística para eventos, limpieza de obras y envíos urgentes.",
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Madrid",
           "addressCountry": "ES"
         },
         "telephone": "+34660221267",
-        "email": "contacto@capifix.es",
-        "openingHours": "Mo-Fr 08:00-20:00, Sa 09:00-14:00",
+        "email": "rafael@capifixlogistica.com",
+        "openingHours": "Mo-Su 08:00-23:00",
         "priceRange": "$$",
-        "areaServed": "España"
+        "areaServed": ["España", "Unión Europea"]
       }
     </script>
 
     <nav>
-      <a href="#hero" class="logo">CAPI<span>FIX</span></a>
+      <a href="#hero" class="logo">
+        <img src="assets/img/logo.png" alt="CAPIFIX Logística Integral" />
+      </a>
       <ul>
         <li><a href="#servicios">Servicios</a></li>
         <li><a href="#horarios">Horarios</a></li>
@@ -794,11 +904,13 @@
 
     <section id="hero">
       <div class="hero-content">
-        <h1>Transporte y <span>Logística</span> Nacional en España</h1>
+        <h1>CAPIFIX <span>Logística Integral</span></h1>
         <p>
-          Empresa especializada en servicios de transporte de mercancías,
-          distribución logística y almacenaje temporal. Soluciones rápidas y
-          seguras para empresas en toda España con atención personalizada 24/7.
+          Empresa especializada en servicios de transporte de mercancías
+          nacional e internacional, mudanzas, distribución logística y
+          almacenaje temporal. Soluciones rápidas y seguras para empresas y
+          particulares en toda España y Unión Europea con atención personalizada
+          24/7.
         </p>
         <div class="hero-buttons">
           <a href="https://wa.me/34660221267" class="btn-primary"
@@ -811,8 +923,8 @@
       </div>
       <div class="hero-image">
         <img
-          src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=800&h=600&fit=crop"
-          alt="Camión de transporte de mercancías CAPIFIX para logística nacional en España"
+          src="https://images.unsplash.com/photo-1571989928541-674d0cf46c4a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=882"
+          alt="Servicio de mudanzas y transporte CAPIFIX Logística Integral"
         />
         <div class="floating-card card-1">
           <h3>98%</h3>
@@ -830,8 +942,9 @@
         Servicios de <span>Logística y Transporte</span>
       </h2>
       <p class="section-subtitle">
-        Soluciones integrales de transporte nacional, distribución de mercancías
-        y almacenaje para empresas en toda España
+        Soluciones integrales de transporte nacional e internacional, mudanzas,
+        distribución de mercancías y almacenaje para empresas y particulares en
+        España y Unión Europea
       </p>
       <div class="services-grid">
         <div class="service-card">
@@ -842,6 +955,26 @@
             España. Entregamos todo tipo de cargas con seguimiento GPS en tiempo
             real. Transporte urgente y programado para empresas y particulares.
             Experiencia en distribución logística nacional.
+          </p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🌍</div>
+          <h3>Transporte Internacional UE</h3>
+          <p>
+            Servicios de transporte y logística internacional con destino a
+            países de la Unión Europea. Gestión aduanera y documentación
+            completa. Envíos programados y urgentes disponibles. Seguimiento
+            internacional en tiempo real.
+          </p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🏠</div>
+          <h3>Mudanzas Nacionales e Internacionales</h3>
+          <p>
+            Servicio completo de mudanzas residenciales y empresariales.
+            Mudanzas nacionales por toda España y mudanzas internacionales a la
+            Unión Europea. Embalaje profesional, transporte seguro y montaje
+            incluido. Personal especializado y seguros de protección.
           </p>
         </div>
         <div class="service-card">
@@ -866,12 +999,22 @@
           </p>
         </div>
         <div class="service-card">
+          <div class="service-icon">🧹</div>
+          <h3>Limpieza de Fin de Obras</h3>
+          <p>
+            Servicio profesional de limpieza post-construcción y fin de obras.
+            Retiramos escombros, limpiamos instalaciones y dejamos espacios
+            listos para entrega. Equipo especializado en limpieza industrial y
+            construcción. Presupuesto sin compromiso.
+          </p>
+        </div>
+        <div class="service-card">
           <div class="service-icon">⚡</div>
           <h3>Envíos Urgentes Express</h3>
           <p>
             Servicio de mensajería urgente y transporte express en 24-48 horas
-            por toda España. Ideal para documentación importante y paquetes
-            prioritarios. Seguimiento detallado de cada envío urgente.
+            por toda España y Europa. Ideal para documentación importante y
+            paquetes prioritarios. Seguimiento detallado de cada envío urgente.
           </p>
         </div>
         <div class="service-card">
@@ -895,16 +1038,16 @@
       </div>
 
       <h3 class="section-title" style="margin-top: 4rem">
-        Nuestros <span>Servicios</span>
+        Servicios <span>Mas Solicitados</span>
       </h3>
       <div class="gallery-grid">
         <div class="gallery-item">
           <img
-            src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?w=400&h=300&fit=crop"
-            alt="Flota de camiones de transporte CAPIFIX"
+            src="https://images.unsplash.com/photo-1586781383963-8e66f88077ec?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1976"
+            alt="Mudanza y transporte CAPIFIX"
           />
           <div class="gallery-overlay">
-            <h4>Transporte Moderno</h4>
+            <h4>Mudanza y Transporte</h4>
           </div>
         </div>
         <div class="gallery-item">
@@ -918,7 +1061,7 @@
         </div>
         <div class="gallery-item">
           <img
-            src="https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?w=400&h=300&fit=crop"
+            src="https://images.unsplash.com/photo-1553413077-190dd305871c?w=400&h=300&fit=crop"
             alt="Servicio de carga y descarga con mozo de almacén"
           />
           <div class="gallery-overlay">
@@ -927,7 +1070,7 @@
         </div>
         <div class="gallery-item">
           <img
-            src="https://images.unsplash.com/photo-1553413077-190dd305871c?w=400&h=300&fit=crop"
+            src="https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?w=400&h=300&fit=crop"
             alt="Mozo de almacén cargando paquetes pesados en CAPIFIX"
           />
           <div class="gallery-overlay">
@@ -938,34 +1081,50 @@
     </section>
 
     <section id="horarios">
-      <h2 class="section-title">Horarios de <span>Atención</span></h2>
+      <h2 class="section-title">
+        Horarios de <span>Atención y Servicio</span>
+      </h2>
       <p class="section-subtitle">
         Estamos disponibles para atender tus necesidades de transporte y
         logística
       </p>
       <div class="horarios-container">
-        <div class="horario-item horario-destacado">
-          <div class="horario-dia">Lunes a Viernes</div>
-          <div class="horario-hora">08:00 - 20:00</div>
+        <div class="horario-box">
+          <h3>⏰ Atención al Cliente</h3>
+          <div class="horario-item horario-destacado">
+            <div class="horario-dia">Lunes a Viernes</div>
+            <div class="horario-hora">08:00 - 20:00</div>
+          </div>
+          <div class="horario-item">
+            <div class="horario-dia">Sábados</div>
+            <div class="horario-hora">09:00 - 14:00</div>
+          </div>
+          <div class="horario-item">
+            <div class="horario-dia">Domingos y Festivos</div>
+            <div class="horario-hora">Solo Emergencias</div>
+          </div>
         </div>
-        <div class="horario-item">
-          <div class="horario-dia">Sábados</div>
-          <div class="horario-hora">09:00 - 14:00</div>
-        </div>
-        <div class="horario-item">
-          <div class="horario-dia">Domingos y Festivos</div>
-          <div class="horario-hora">Cerrado</div>
-        </div>
-        <div
-          class="horario-item horario-destacado"
-          style="
-            margin-top: 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            padding-top: 2rem;
-          "
-        >
-          <div class="horario-dia">⚡ Servicio de Emergencias</div>
-          <div class="horario-hora">24/7 Disponible</div>
+        <div class="horario-box">
+          <h3>🚚 Horario de Servicio</h3>
+          <div class="horario-item horario-destacado">
+            <div class="horario-dia">Lunes a Sábado</div>
+            <div class="horario-hora">08:00 - 23:00</div>
+          </div>
+          <div class="horario-item horario-emergencia horario-destacado">
+            <div class="horario-dia">⚡ Emergencias</div>
+            <div class="horario-hora">24/7 Disponible</div>
+          </div>
+          <div
+            class="horario-item"
+            style="
+              margin-top: 1rem;
+              padding-top: 1rem;
+              border-top: 1px solid rgba(255, 255, 255, 0.1);
+            "
+          >
+            <div class="horario-dia">Domingos y Festivos</div>
+            <div class="horario-hora">Solo Emergencias</div>
+          </div>
         </div>
       </div>
     </section>
@@ -974,13 +1133,15 @@
       <div class="about-content">
         <h2 class="section-title">Quiénes <span>Somos</span></h2>
         <p>
-          CAPIFIX Logística es una empresa española líder en servicios de
-          transporte nacional y distribución de mercancías. Con años de
-          experiencia en el sector logístico, nos especializamos en ofrecer
-          soluciones integrales de transporte terrestre, almacenaje temporal y
-          logística para eventos en toda España. Nuestro compromiso es la
-          excelencia en cada entrega, garantizando puntualidad, seguridad y
-          atención personalizada 24/7.
+          CAPIFIX Logística Integral es una empresa española líder en servicios
+          de transporte nacional e internacional, mudanzas y distribución de
+          mercancías. Con años de experiencia en el sector logístico, nos
+          especializamos en ofrecer soluciones integrales de transporte
+          terrestre, mudanzas residenciales y empresariales, almacenaje
+          temporal, logística para eventos y limpieza de fin de obras en toda
+          España y la Unión Europea. Nuestro compromiso es la excelencia en cada
+          entrega, garantizando puntualidad, seguridad y atención personalizada
+          24/7.
         </p>
         <div class="stats">
           <div class="stat-item">
@@ -1000,6 +1161,33 @@
             <p>Entregas a Tiempo</p>
           </div>
         </div>
+
+        <h3 class="section-title" style="margin-top: 4rem">
+          Lo que dicen <span>Nuestros Clientes</span>
+        </h3>
+        <div class="reviews-grid">
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">
+              "Excelente servicio de principio a fin. La empresa demuestra
+              profesionalidad, puntualidad y una gran organización. La
+              comunicación fue clara en todo momento y cumplieron con los plazos
+              tal como se acordó. Se nota que les importa el cliente, cuidan los
+              detalles y ofrecen soluciones rápidas ante cualquier imprevisto.
+              Sin duda, volveré a contar con ellos y los recomiendo al 100%."
+            </p>
+            <p class="review-author">- Juan Carlos Andrade Garcia</p>
+          </div>
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">
+              "Llevamos años trabajando con CAPIFIX para la logística de
+              nuestros eventos y siempre cumplen. Puntuales, eficientes y con
+              precios competitivos. Un gran equipo."
+            </p>
+            <p class="review-author">- Maria Mendoza</p>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -1007,8 +1195,8 @@
       <h2 class="section-title">Contáctanos <span>Ahora</span></h2>
       <div class="contact-container">
         <p class="contact-text">
-          ¿Necesitas servicios de transporte, logística o almacenaje? Estamos
-          disponibles para atenderte por WhatsApp, Instagram o correo
+          ¿Necesitas servicios de transporte, mudanzas, logística o almacenaje?
+          Estamos disponibles para atenderte por WhatsApp, Instagram o correo
           electrónico. Solicita tu cotización sin compromiso.
         </p>
         <div class="social-contact">
@@ -1032,7 +1220,7 @@
             <div class="social-label">WhatsApp</div>
           </a>
           <a
-            href="https://www.instagram.com/capifix"
+            href="https://www.instagram.com/capifix_logistica_sl?igsh=anBuMDZ6Zzd6cDl2&utm_source=qr"
             class="social-btn instagram"
             target="_blank"
           >
@@ -1050,7 +1238,7 @@
             </div>
             <div class="social-label">Instagram</div>
           </a>
-          <a href="mailto:contacto@capifix.es" class="social-btn email">
+          <a href="mailto:rafael@capifixlogistica.com" class="social-btn email">
             <div class="social-icon">
               <svg
                 width="32"
@@ -1064,6 +1252,7 @@
               </svg>
             </div>
             <div class="social-label">Email</div>
+            <div class="social-detail">rafael@capifixlogistica.com</div>
           </a>
         </div>
       </div>
@@ -1071,15 +1260,19 @@
 
     <footer>
       <div class="footer-content">
-        <p>&copy; 2025 CAPIFIX Logística. Todos los derechos reservados.</p>
         <p>
-          Empresa de transporte nacional y distribución de mercancías en España
+          &copy; 2025 CAPIFIX Logística Integral. Todos los derechos reservados.
+        </p>
+        <p>
+          Empresa de transporte nacional e internacional, mudanzas y
+          distribución de mercancías en España y Unión Europea
         </p>
         <div class="footer-keywords">
-          Transporte nacional | Logística España | Distribución mercancías |
-          Almacenaje temporal | Logística eventos | Envíos urgentes | Mozo de
-          almacén | Transporte terrestre | Servicios logísticos Madrid | Empresa
-          de transporte
+          Transporte nacional | Transporte internacional UE | Mudanzas España |
+          Mudanzas internacionales | Logística España | Distribución mercancías
+          | Almacenaje temporal | Logística eventos | Envíos urgentes | Mozo de
+          almacén | Transporte terrestre | Servicios logísticos Madrid |
+          Limpieza fin de obras | Empresa de transporte | CAPIFIX
         </div>
       </div>
     </footer>
