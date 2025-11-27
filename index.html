@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <!--  Charset y viewport  -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!--  Google Analytics -->
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"
@@ -19,7 +17,6 @@
       gtag("config", "G-XXXXXXXXXX");
     </script>
 
-    <!--  Favicons -->
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
@@ -36,13 +33,10 @@
       sizes="512x512"
       href="android-chrome-512x512.png"
     />
-    <link rel="manifest" href="site.webmanifest" />
 
-    <!--  Theme & Tile Colors -->
     <meta name="theme-color" content="#E64A19" />
     <meta name="msapplication-TileColor" content="#E64A19" />
 
-    <!-- SEO -->
     <meta
       name="description"
       content="CAPIFIX Logística Integral - Empresa líder en transporte nacional e internacional, mudanzas, distribución y almacenaje en España y Unión Europea. Servicios de logística para eventos, envíos urgentes, limpieza de obras y soluciones de transporte personalizadas. Cobertura en toda España con atención 24/7. Precios económicos"
@@ -54,7 +48,6 @@
     <meta name="author" content="CAPIFIX Logística Integral" />
     <link rel="canonical" href="https://www.capifixlogistica.com/" />
 
-    <!--  Open Graph -->
     <meta
       property="og:title"
       content="CAPIFIX Logística Integral | Transporte y Distribución España y UE"
@@ -72,13 +65,11 @@
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
 
-    <!--  Title -->
     <title>
       CAPIFIX Logística Integral | Transporte Nacional e Internacional, Mudanzas
       y Distribución
     </title>
 
-    <!--  Preconnect & Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -751,6 +742,16 @@
           width: 50px;
           height: 50px;
         }
+        .fixed-nav:hover .fixed-nav-menu {
+          opacity: 0;
+          visibility: hidden;
+          transform: translateY(20px);
+        }
+        .fixed-nav.active .fixed-nav-menu {
+          opacity: 1;
+          visibility: visible;
+          transform: translateY(0);
+        }
       }
       @media (max-width: 640px) {
         nav {
@@ -1190,56 +1191,83 @@
       </div>
 
       <div class="footer-content" style="margin-top: 20px; font-size: 0.8rem; opacity: 0.7">
-  
-  <p>
-    Aliados estratégicos:
-    <a
-      href="https://www.dediezados.com"
-      target="_blank"
-      rel="noopener noreferrer"
-      style="color: var(--orange); text-decoration: none"
-    >
-      De Diez A dos | Madrid Events
-    </a>
-  </p>
+        <p>
+          Aliados estratégicos:
+          <a
+            href="https://www.dediezados.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            style="color: var(--orange); text-decoration: none"
+          >
+            De Diez A dos | Madrid Events
+          </a>
+        </p>
 
-  <p style="margin-top: 5px; display: flex; justify-content: center; align-items: center; gap: 5px;">
-    Dev
-    <a
-      href="https://www.ybanez.dev"
-      target="_blank"
-      rel="noopener noreferrer"
-      style="color: #fff; text-decoration: none; font-family: monospace; display: inline-flex; align-items: center; gap: 8px;"
-    >
-      <svg 
-        width="24" 
-        height="24" 
-        viewBox="0 0 200 200" 
-        xmlns="http://www.w3.org/2000/svg"
-        style="border-radius: 4px;" 
-      >
-        <defs>
-          <linearGradient id="footerLogoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stop-color="#22d3ee"/>
-            <stop offset="100%" stop-color="#3b82f6"/>
-          </linearGradient>
-        </defs>
-        <rect width="200" height="200" rx="16" fill="#000"/>
-        <rect x="2" y="2" width="196" height="196" rx="14" fill="none" stroke="#1e293b" stroke-width="2"/>
-        <path d="M 38 40 L 26 40 L 26 88 L 16 100 L 26 112 L 26 160 L 38 160" stroke="#4ade80" stroke-width="4" fill="none" stroke-linecap="square"/>
-        <path d="M 162 40 L 174 40 L 174 88 L 184 100 L 174 112 L 174 160 L 162 160" stroke="#4ade80" stroke-width="4" fill="none" stroke-linecap="square"/>
-        <line x1="75" y1="55" x2="100" y2="95" stroke="url(#footerLogoGrad)" stroke-width="5" stroke-linecap="round"/>
-        <path d="M 130 42 Q 118 75 100 95" stroke="url(#footerLogoGrad)" stroke-width="5" fill="none" stroke-linecap="round"/>
-        <line x1="100" y1="95" x2="75" y2="158" stroke="url(#footerLogoGrad)" stroke-width="5" stroke-linecap="round"/>
-        <rect x="67" y="47" width="16" height="16" rx="3" fill="#000" stroke="url(#footerLogoGrad)" stroke-width="2.5"/>
-        <rect x="122" y="34" width="16" height="16" rx="3" fill="#000" stroke="url(#footerLogoGrad)" stroke-width="2.5"/>
-        <rect x="91" y="86" width="18" height="18" rx="3" fill="url(#footerLogoGrad)"/>
-        <rect x="67" y="150" width="16" height="16" rx="3" fill="#000" stroke="url(#footerLogoGrad)" stroke-width="2.5"/>
-      </svg>
-      Anthonny Ybañez
-    </a>
-  </p>
-</div>
+        <p style="margin-top: 5px; display: flex; justify-content: center; align-items: center; gap: 5px;">
+          Dev
+          <a
+            href="https://www.ybanez.dev"
+            target="_blank"
+            rel="noopener noreferrer"
+            style="color: #fff; text-decoration: none; font-family: monospace; display: inline-flex; align-items: center; gap: 8px;"
+          >
+            <svg 
+              width="24" 
+              height="24" 
+              viewBox="0 0 200 200" 
+              xmlns="http://www.w3.org/2000/svg"
+              style="border-radius: 4px;" 
+            >
+              <defs>
+                <linearGradient id="footerLogoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#22d3ee"/>
+                  <stop offset="100%" stop-color="#3b82f6"/>
+                </linearGradient>
+              </defs>
+              <rect width="200" height="200" rx="16" fill="#000"/>
+              <rect x="2" y="2" width="196" height="196" rx="14" fill="none" stroke="#1e293b" stroke-width="2"/>
+              <path d="M 38 40 L 26 40 L 26 88 L 16 100 L 26 112 L 26 160 L 38 160" stroke="#4ade80" stroke-width="4" fill="none" stroke-linecap="square"/>
+              <path d="M 162 40 L 174 40 L 174 88 L 184 100 L 174 112 L 174 160 L 162 160" stroke="#4ade80" stroke-width="4" fill="none" stroke-linecap="square"/>
+              <line x1="75" y1="55" x2="100" y2="95" stroke="url(#footerLogoGrad)" stroke-width="5" stroke-linecap="round"/>
+              <path d="M 130 42 Q 118 75 100 95" stroke="url(#footerLogoGrad)" stroke-width="5" fill="none" stroke-linecap="round"/>
+              <line x1="100" y1="95" x2="75" y2="158" stroke="url(#footerLogoGrad)" stroke-width="5" stroke-linecap="round"/>
+              <rect x="67" y="47" width="16" height="16" rx="3" fill="#000" stroke="url(#footerLogoGrad)" stroke-width="2.5"/>
+              <rect x="122" y="34" width="16" height="16" rx="3" fill="#000" stroke="url(#footerLogoGrad)" stroke-width="2.5"/>
+              <rect x="91" y="86" width="18" height="18" rx="3" fill="url(#footerLogoGrad)"/>
+              <rect x="67" y="150" width="16" height="16" rx="3" fill="#000" stroke="url(#footerLogoGrad)" stroke-width="2.5"/>
+            </svg>
+            Anthonny Ybañez
+          </a>
+        </p>
+      </div>
     </footer>
+
+    <script>
+      (function() {
+        const fixedNav = document.querySelector('.fixed-nav');
+        const navBtn = document.querySelector('.fixed-nav-btn');
+        const navLinks = document.querySelectorAll('.fixed-nav-menu a');
+
+        const isMobile = () => window.innerWidth <= 968;
+
+        navBtn.addEventListener('click', (e) => {
+          if (!isMobile()) return;
+          e.stopPropagation();
+          fixedNav.classList.toggle('active');
+        });
+
+        navLinks.forEach(link => {
+          link.addEventListener('click', () => {
+            if (isMobile()) fixedNav.classList.remove('active');
+          });
+        });
+
+        document.addEventListener('click', (e) => {
+          if (isMobile() && !fixedNav.contains(e.target)) {
+            fixedNav.classList.remove('active');
+          }
+        });
+      })();
+    </script>
   </body>
 </html>
